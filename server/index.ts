@@ -41,6 +41,7 @@ app.use("*",(_,res) => {
 });
 
 app.listen(PORT, () => {
+    console.log(process.env.MONGO_URI)
     connectDB();
     console.log(`Server listen at port ${PORT}`);
 });
